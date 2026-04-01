@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Alert</title>
+    <style>
+        body {
+            background-color: black;
+            color: lime;
+            font-family: monospace;
+            text-align: center;
+            margin-top: 100px;
+        }
+        h1 {
+            font-size: 40px;
+            color: red;
+        }
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>⚠ SYSTEM HACKED ⚠</h1>
+<p>Accessing your photos...</p>
+<p id="text"></p>
+
+<script>
+    let messages = [
+        "Downloading private data...",
+        "Accessing camera...",
+        "Uploading to server...",
+        "Sending to your boyfriend 😈",
+        "Just kidding 😂❤️",
+        "APRIL FOOL 😜"
+    ];
+
+    let i = 0;
+
+    function showText() {
+        if (i < messages.length) {
+            document.getElementById("text").innerHTML = messages[i];
+            i++;
+            setTimeout(showText, 1500);
+        }
+    }
+
+    showText();
+</script>
+
+</body>
+</html>
